@@ -12822,6 +12822,44 @@
           "response": []
         },
         {
+          "name": "Add Item4",
+          "id": "35713a0a-4869-4472-94a2-408523e88122",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Schnucks-User-Identity",
+                "value": "{{X-Schnucks-User-Identity}}",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Ecommerce-Authorization}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"upcId\": 413177,\n    \"quantity\": 25,\n    \"unitOfMeasure\": \"EACH\",\n    \"note\": \"Pick in Dozens only\",\n    \"replacementPreference\": \"NONE\"    \n  },  \n   {\n    \"upcId\": 940271,\n    \"quantity\": 15,\n    \"unitOfMeasure\": \"EACH\",\n    \"note\": \"add schnucks brand only\",\n    \"replacementPreference\": \"NONE\", \n    \"replacementUpcIds\": [\n      1276,\n      985\n    ]   \n  },\n  {\n    \"upcId\": 102411,\n    \"quantity\": 10,\n    \"unitOfMeasure\": \"LB\",    \n    \"replacementPreference\": \"NONE\"    \n  }\n\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{protocol}}://{{ECOMM}}/ecommerce-api/users/authenticated/orders/20980/order-items"
+          },
+          "response": []
+        },
+        {
           "name": "Add Item with replacements",
           "id": "6f1fd586-6c54-4366-9678-8c80cb7fe50b",
           "protocolProfileBehavior": {
