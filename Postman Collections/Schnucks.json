@@ -731,6 +731,25 @@
             "url": "http://{{STORE-INFO}}/store-info-api/stores/lookup"
           },
           "response": []
+        },
+        {
+          "name": "Get Store lookup by IP octet Dup",
+          "id": "58c776a2-3214-470a-af83-c964b203e9be",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-FORWARDED-FOR",
+                "value": "192.19.21.93",
+                "type": "text"
+              }
+            ],
+            "url": "http://{{STORE-INFO}}/store-info-api/stores/lookup"
+          },
+          "response": []
         }
       ],
       "id": "be7d747c-1aa1-4fd3-9551-617a2af7448c"
